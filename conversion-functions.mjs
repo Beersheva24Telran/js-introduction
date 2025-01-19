@@ -47,11 +47,17 @@ export function myToStringFromIntNumber(number) {
     //myToStringFromIntNumber(-12) -> returns "-12"
     //myToStringFromIntNumber(+12) -> return "12"
     //myToStringFromIntNum("a1") -> returns ""
-    //
+    //myToStringFromInt("1a") -> returns "1"
     //Disallowed the following operations:
     //toString() using
     //constructor String
-    //operator + with emty string like "" + 
+    
+    //operator + with emty string like "" + for conversion purposes, but actual ccncatination od strings is a permitted operation
+    //"" + number is disallowed but "" + string is allowed
+    //"" + "1" permitted
+    //"" + 1 is not so good
+    // let res = "";
+    // res + number % 10
 }
 
 

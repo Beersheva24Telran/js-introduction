@@ -1,5 +1,13 @@
-import {describe, it, expect} from 'vitest';
+import {describe, it, expect, test} from 'vitest';
 import { myParseInt } from '../conversion-functions.mjs';
+describe ("equal operators", () => {
+    it("simple equility operator ==", ()=> {
+        expect(12=='12').toBeTruthy();
+    })
+    it("strong equility operator ===", () => {
+        expect(12 === '12').toBeFalsy()
+    })
+})
 //Unit test is AAA - Arranging / Act / Assertion
 describe("myParseInt test suit", () => {
    it("reqular string with positive integer number", () => {
@@ -38,4 +46,5 @@ describe("myParseInt test suit", () => {
     expect(myParseInt("- 12")).toBeNaN();
    })
 })
+
 
