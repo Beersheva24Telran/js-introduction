@@ -38,3 +38,4 @@ describe("myParseInt test suit", () => {
     expect(myParseInt("- 12")).toBeNaN();
    })
 })
+

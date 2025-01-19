@@ -37,5 +37,22 @@ function getDigit(digitStr) {
     return res;
 }
 
+export function myToStringFromIntNumber(number) {
+    //TODO returns string presentation of the given number
+    // if number has type of string, the string should contain a number matching the parseInt syntax
+    // examples:
+    //myToStringFromIntNumber(12.35) -> returns "12"
+    //myToStringFromIntNumber("12.35") -> returns "12"
+    //myToStringFromIntNumber() -> returns "" (empty string)
+    //myToStringFromIntNumber(-12) -> returns "-12"
+    //myToStringFromIntNumber(+12) -> return "12"
+    //myToStringFromIntNum("a1") -> returns ""
+    //
+    //Disallowed the following operations:
+    //toString() using
+    //constructor String
+    //operator + with emty string like "" + 
+}
+
 
 
