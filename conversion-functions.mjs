@@ -90,6 +90,7 @@ function getActualRadix(radix) {
   }
   return actualRadix;
 }
+//Printed ASCII table codes are from 32 (Space) to 126 (~)
 function stringShift(str, shift) {
     //TODO
     //each character code inside string is increased on the shift value 'a' shifted on 3 will result character 'd'
