@@ -90,3 +90,21 @@ function getActualRadix(radix) {
   }
   return actualRadix;
 }
+function stringShift(str, shift) {
+    //TODO
+    //each character code inside string is increased on the shift value 'a' shifted on 3 will result character 'd'
+    //'9' shifted on 2 will result ';'
+    //if shifting causes exiting out of printable ASCII character there will by cycling from the begining
+    //if the 'shift' is either a negative number or not a number the given string should be returned with no updating
+    // stringShift("Hello", 3) -> "Khoor"
+    // stringShift("~Z4", 3) -> '"]7"
+}
+function stringUnshift(str, unshift) {
+    //TODO
+    //each character code inside string is decreased on the unshift value 'd' unshifted on 3 will result character 'a'
+    //';' ushifted on 2 will result '9'
+    //if ushifting causes exiting out of printable ASCII character there will be cycling from the end
+    //if the 'ushift' is either a negative number or not a number the given string should be returned with no updating
+    // stringUnshift("Khoor", 3) -> "Hello"
+    // stringUnhift("]7", 3) -> "~Z"
+}
