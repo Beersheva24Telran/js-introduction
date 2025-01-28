@@ -48,9 +48,9 @@ describe("creating, getters, computeSalary tests", () => {
     expect(budget).toBe(10000 + 10100 + 10200 + 20000)
   } )
   it("setPrototype", () => {
-    const obj = {};
-    Object.setPrototypeOf(obj, new Employee());
-    const prototype = Object.getPrototypeOf(obj);
-    expect(obj.getId()).toBe(0)
+    const obj = {id:123, department:"QA", basicSalary:10000, factor:2};
+   Object.setPrototypeOf(obj, new Manager());
+    expect(obj.computeSalary()).toBe(20000)
+   
   })
 });
