@@ -29,8 +29,27 @@ function sleep (timeout) {
         }
         console.log(num);
     }
-    let res = sleep(timeout).then(() => initialNumber()).then(num => sum(num)).then(num => sum(num))
-    .then(num => sum(num, -1))
-    .then(num => displayNum(num)).catch(er => console.log(er));
+    // let res = sleep(timeout).then(() => initialNumber()).then(num => sum(num)).then(num => sum(num))
+    // .then(num => sum(num, -1))
+    // .then(num => displayNum(num)).catch(er => console.log(er));
+    async function summing(numbers) {
+           try {
+             await sleep(1000);
+             let result = initialNumber();
+             for(let num of numbers) {
+                 result = result + sum(result, num)
+             }
+             return result;
+           } catch (error) {
+               console.log("exception of summing", error)
+           }
+
+    }
+    let res = (async () =>{let res = await summing([1, 2, -13])/*.then(num => displayNum(num)).catch(er => console.log("exception from displayNum",er));*/
+    try {
+        displayNum(res);
+    } catch (error) {
+        console.log(error);
+    }})();
     console.log("kukureku");
     console.log(1 + res); //"1[object Promise]"
