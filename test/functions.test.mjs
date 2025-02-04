@@ -2,7 +2,7 @@ import {describe, it, expect} from 'vitest';
 import { myBind } from '../functions.mjs';
 describe("myBind test according to the TODO comments", () => {
     const point = {x:3, y:4}; 
-    const dimensions = {x:3, y:4, z:30};
+    const dimensions = {x:3, y:4, z:30, [Symbol()]:30};
     point.sumArguments
     function sumArguments(num3=0, num4=0) {
         return this.x + this.y + num3 + num4;
